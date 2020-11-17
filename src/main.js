@@ -44,10 +44,29 @@ function createHTMLString(dress){
     `;
 }
 
+function onButtonClick(event, dresses){
+    //console.log(event.target);
+    const key = event.target.dataset.key? event.target.dataset.key : event.target.parentNode.dataset.key;
+    const value = event.target.dataset.value? event.target.dataset.value : event.target.parentNode.dataset.value;
+    
+    console.log(key, value);
+    if(key == null || value == null) return;
+
+    displayDresses(dresses.filter(dress=>dress[key] === value));
+}
+
+function setEventListerers(dresses){
+    const logo = document.querySelector('.logo__img');
+    const buttons = document.querySelector('.btn__container');
+
+    logo.addEventListener('click', ()=> displayDresses(dresses));
+    buttons.addEventListener('click', event => onButtonClick(event, dresses));
+}
+
 // main
 loadDresses()
 .then(dresses => {
     displayDresses(dresses);
-    // setEventListerers(dresses);
+    setEventListerers(dresses);
 })
 .catch(console.log);
