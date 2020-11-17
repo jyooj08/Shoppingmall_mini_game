@@ -64,6 +64,13 @@ li{
   text-align: center;
 }
 
+.logo__img{
+  cursor: pointer;
+}
+.logo__img:hover{
+  transform: scale(1.1);
+}
+
 .btn__container{
   width: 100%;
   display:flex;
