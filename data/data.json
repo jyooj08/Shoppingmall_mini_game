@@ -38,7 +38,7 @@
         {
             "type": "skirt", 
             "color":"yellow",
-            "gender":"emale",
+            "gender":"male",
             "size":"small",
             "image": "../img/yellow_s.png"
         },

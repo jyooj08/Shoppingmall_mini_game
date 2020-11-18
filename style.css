@@ -85,7 +85,7 @@ li{
 .btn:hover
 {
   transform: scale(1.1);
-  /* transition: all 300ms ease; */
+  transition: all 100ms ease;
 }
 
 .btn img{
@@ -106,7 +106,9 @@ li{
 /* Dress */
 .dresses{
   width: 100%;
+  height: 400px;
   margin-top: 40px;
+  scrollbar-color: var(--color-pink);
 }
 .dress{
   background-color: var(--color-white);
